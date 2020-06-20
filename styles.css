@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-image: url('https://www.tourneau.com/on/demandware.static/-/Sites-Tourneau-Library/default/dwc9b39657/images/homepage/new/rolex/Rolex_Explorer_m214270-0003_TopView_Tourneau_desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    position: relative;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(10, 10, 10, 0.3);
+}
