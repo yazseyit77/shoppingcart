@@ -4,55 +4,55 @@ let products = [
   {
     name: "casio1",
     tag: "casio1",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio1",
     tag: "casio1",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio2",
     tag: "casio2",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio3",
     tag: "casio3",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio4",
     tag: "casio4",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio5",
     tag: "casio5",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio6",
     tag: "casio6",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio7",
     tag: "casio7",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
   {
     name: "casio8",
     tag: "casio8",
-    price: 15,
+    price: 150,
     inCart: 0,
   },
 ];
@@ -61,6 +61,7 @@ for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", (e) => {
     e.preventDefault();
     cartNumbers(products[i]);
+    totalCost(products[i]);
   });
 }
 
@@ -107,6 +108,17 @@ function setItems(product) {
   }
 
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(product) {
+  let cartCost = localStorage.getItem("totalCost");
+  //   cartCost = parseInt(cartCost);
+
+  if (cartCost != null) {
+    localStorage.setItem("totalCost", cartCost + product.price);
+  } else {
+    localStorage.setItem("totalCost", product.price);
+  }
 }
 
 onloadCartNumbers();
