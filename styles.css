@@ -70,3 +70,39 @@ li a {
     cursor: pointer;
     text-decoration: none;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.image {
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+img {
+    height: 300px;
+}
+
+.add-cart {
+    position: absolute;
+    width: 100%;
+    background-color: darkgrey;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.image:hover .add-cart {
+    bottom: 50px;
+    opacity: 1;
+    padding: 1px;
+    text-decoration: none;
+}
